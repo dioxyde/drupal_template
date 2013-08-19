@@ -23,7 +23,7 @@
 
     <!-- PHP Depend -->
     <target name="pdepend">
-        <phpdepend file="${project.basedir}/${source}/www">
+        <phpdepend file="${project.basedir}/${source}/www/sites/all/themes/dm_skin">
             <logger type="jdepend-xml" outfile="${project.basedir}/build/logs/jdepend.xml" />
             <logger type="jdepend-chart" outfile="${project.basedir}/build/pdepend/dependencies.svg" />
             <logger type="overview-pyramid" outfile="${project.basedir}/build/pdepend/overview-pyramid.svg" />
@@ -32,14 +32,14 @@
 
     <!-- PHP Mess Detector -->
     <target name="phpmd">
-        <phpmd file="${project.basedir}/${source}/www">
+        <phpmd file="${project.basedir}/${source}/www/sites/all/themes/dm_skin">
             <formatter type="xml" outfile="${project.basedir}/build/phpmd.xml" />
         </phpmd>
     </target>
 
     <!-- Détection de portions de code copié-collé -->
     <target name="phpcpd">
-        <phpcpd file="${project.basedir}/${source}/www">
+        <phpcpd file="${project.basedir}/${source}/www/sites/all/themes/dm_skin">
             <formatter type="pmd" outfile="${project.basedir}/build/logs/pmd-cpd.xml"/>
         </phpcpd>
     </target>

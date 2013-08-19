@@ -51,14 +51,12 @@
 
     <!-- Code Sniffer -->
     <target name="phpcs">
-  <exec executable="phpcs">
-    <arg line="--report=checkstyle 
- --report-file=${project.basedir}/build/logs/checkstyle.xml
- --standard=Zend
- ${project.basedir}/${source}/www/sites/all/themes/dm_skin/**/*.php" />
-  </exec>
-
-
+        <phpcodesniffer standard="Drupal">
+            <fileset dir="${project.basedir}/${source}/www/sites/all/themes/dm_skin">
+                <include name="**/*.php"/>
+            </fileset>
+            <formatter type="checkstyle" outfile="${project.basedir}/build/logs/checkstyle.xml"/>
+        </phpcodesniffer>
     </target>
 
     <target name="qa" description="Lance les outils d'analyse">

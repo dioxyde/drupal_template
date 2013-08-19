@@ -1,0 +1,50 @@
+.accordeon {
+  .content {
+    @include clearfix;
+  }
+	> li {
+		cursor: default;
+		background-color: $green2;
+		padding: 1px 30px;
+		margin: 7px 0;
+		-webkit-box-shadow:  0px 1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+        box-shadow:  0px 1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+        -webkit-border-radius: 2px;
+	    border-radius: 2px;
+	    -webkit-transition: background-color .6s ease-in-out;
+		   -moz-transition: background-color .6s ease-in-out;
+        	-ms-transition: background-color .6s ease-in-out;
+        	 -o-transition: background-color .6s ease-in-out;
+				transition: background-color .6s ease-in-out;
+		&:last-child {
+			@include shadow-bottom-light;
+		}
+	}
+	> li.active {
+		background-color: white;
+		-webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
+		h2 {
+			margin-bottom: 18px;
+        	color:$green2;
+        	text-shadow:none;
+        	background-position: bottom right;
+		}
+	    .content {
+	      padding: 1px 0;
+	    }
+	}
+	h2 {
+		cursor: pointer;
+		line-height: 18px;
+		color: white;
+		text-shadow: 0px 2px 0px darken($green2,8%);
+        font-size:18px;
+        background: transparent url('../images/picto/triangles-sprite.png') top right no-repeat;
+        -webkit-transition: color .6s ease-in-out, text-shadow .6s ease-in-out;
+		   -moz-transition: color .6s ease-in-out, text-shadow .6s ease-in-out;
+        	-ms-transition: color .6s ease-in-out, text-shadow .6s ease-in-out;
+        	 -o-transition: color .6s ease-in-out, text-shadow .6s ease-in-out;
+				transition: color .6s ease-in-out, text-shadow .6s ease-in-out;
+	} 
+}

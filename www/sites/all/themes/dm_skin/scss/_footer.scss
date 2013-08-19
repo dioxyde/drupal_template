@@ -1,0 +1,93 @@
+#footer {
+  display: block;
+  margin-top: 50px;
+  background: #d8d8d8 url("../images/bg/footer_strip.gif") 50% 0 repeat-x;
+  .footer-decoration {
+    background: url("../images/bg/footer_watermark.png") 50% 100% no-repeat;
+  }
+  .footer-inner {
+    width: $main-width;
+    min-height: 355px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .liens-sociaux {
+    @include clearfix;
+    padding-left: 240px;
+    padding-top: 10px;
+    height: 45px;
+    .label {
+      float: left;
+      margin-right: 10px;
+      padding-top: 7px;
+      color: #fff;
+      font: bold 18px 'montserrat',Arial,sans-serif;
+      text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+    }
+    a {
+      float: left;
+      display: block;
+      margin-left: 10px;
+      img {
+        display: block;
+      }
+    }
+  }
+  .cols {
+    @include clearfix;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .col {
+    float: left;
+    width: 200px;
+    min-height: 165px;
+    padding: 0 20px 0 19px;
+    border-left: 1px solid #c3c3c0;
+    &:first-child {
+      border-left: none;
+    }
+    h2 {
+      margin: 0 0 15px 0;
+      color: #555555;
+      font: bold 14px 'montserrat',Arial,sans-serif;
+      text-transform: uppercase;
+    }
+    li {
+      margin-top: 10px;
+    }
+    a {
+      display: block;
+      background: url("../images/picto/puce_gris.png") 4px 6px no-repeat;
+      padding-left: 16px;
+      font: 12px Arial,sans-serif;
+      color: #555555;
+      &:hover {
+        color: $couleur_lien;
+      }
+    }
+  }
+  .liens-footer {
+    border-top: 1px solid #c3c3c0;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    ul {
+      @include clearfix;
+    }
+    li {
+      float: left;
+      padding: 0 20px;
+      border-left: 1px solid #c3c3c0;
+      &:first-child {
+        border-left: none;
+      }
+    }
+    a {
+      font: 12px Arial,sans-serif;
+      color: #555555;
+      &:hover {
+        color: $couleur_lien;
+      }
+    }
+  }
+}

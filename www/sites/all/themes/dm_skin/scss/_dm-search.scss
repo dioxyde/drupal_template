@@ -1,0 +1,58 @@
+.formulaire .form-tree-checkboxes-block {
+  float:none;
+  width:auto;
+}
+
+#fullpage-sidebar-left {
+ .content-block {
+    float: right;
+    width: 630px;
+  }
+  .sidebar {
+    display: block;
+    float: left;
+    width: 310px;
+  }
+}
+
+#fullpage-sidebar-right {
+  .content-block {
+    float: left;
+    width: 630px;
+  }
+  .sidebar {
+    display: block;
+    float: right;
+    width: 310px;
+  }
+}
+
+.dm_search-dialog {
+  display: none;
+  input {
+    width: 100%;
+  }
+}
+#content .formulaire input.form-autocomplete {
+  background-image:none;
+}
+.dmtoolbar .send_email .stButton {
+  display: none !important;
+}
+
+.formulaire span.dynatree-icon {
+  display: none;
+}
+
+.ui-autocomplete {
+  .ui-menu-item a {
+    font: 12px arial,sans-serif;
+  }
+  .ui-state-focus {
+    border:none;
+  }
+}
+
+.sidebar-second .formulaire .form-tree-checkboxes-block {
+  width:auto;
+}

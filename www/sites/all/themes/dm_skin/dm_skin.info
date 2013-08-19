@@ -1,0 +1,43 @@
+name = 'DM Thème'
+description = 'Thème desktop par défaut du site <a href="http://www.defi-metiers.fr" title="Lien vers le site de Défi Métiers">Défi Métiers</a>.'
+package = 'Défi Métiers'
+core = 7.x
+engine = phptemplate
+screenshot = screenshot.png
+version = 1.0
+
+; CSS
+
+stylesheets[all][] = css/styles.css
+stylesheets[print][] = css/print.css
+
+; JS
+
+scripts[] = 'js/modernizer.js'
+scripts[] = 'js/plugins.js'
+
+; REGIONS
+
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[help] = Help
+
+regions[user_bar] = User bar
+regions[header] = Header
+
+regions[highlighted] = Highlighted
+regions[content] = Content
+
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+
+regions[footer_social] = Footer social
+regions[footer_firstcolumn] = Footer first column
+regions[footer_secondcolumn] = Footer second column
+regions[footer_thirdcolumn] = Footer third column
+regions[footer_fourthcolumn] = Footer fourth column
+regions[footer] = Footer
+
+; PANELS LAYOUTS
+
+plugins[panels][layouts] = templates/panels/layouts

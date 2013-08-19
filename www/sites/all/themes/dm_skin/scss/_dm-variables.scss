@@ -1,0 +1,31 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+// Global values
+// --------------------------------------------------
+
+
+// Grays
+// -------------------------
+$black:                 #000 !default;
+$grayDarker:            lighten($black, 16%) !default;
+$grayDark:              lighten($black, 33%) !default;
+$gray:                  lighten($black, 50%) !default;
+$grayLight:             lighten($black, 66%) !default;
+$grayLighter:           lighten($black, 83%) !default;
+$white:                 #fff !default;
+
+
+// Accent colors
+// -------------------------
+$vert:                  #8BBC13 !default;
+$orange:                #F5A825 !default;
+$violet:                #811A76 !default;
+
+
+// Links
+// -------------------------
+$linkColor:             #08c !default;
+$linkColorHover:        darken($linkColor, 15%) !default;

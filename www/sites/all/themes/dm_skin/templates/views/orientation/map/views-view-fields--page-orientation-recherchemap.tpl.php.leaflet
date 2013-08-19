@@ -1,0 +1,26 @@
+<?php
+/**
+ * @file
+ * Default simple view template to all the fields as a row.
+ * @ingroup views_templates
+ */
+
+  $titre = $fields['title']->content ;
+  $adresse_geo = $fields['field_adresse_geo']->content ;
+  $cp = $fields['field_adresse_postal_code']->content ;
+  $ville = $fields['field_adresse_locality']->content ;
+  $rue = $fields['field_adresse_thoroughfare']->content ;
+
+  $theme = base_path() . path_to_theme();
+  $var = array ("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", );
+
+?>
+
+//SEPGEO<?php echo $adresse_geo ?>SEPGEO
+//Ligne au-dessus pour pouvoir trouver le lat/long moyenne. Surtout ne pas effacer et ne pas modifier le SEPGEO !
+
+var icon_<?php echo $id; ?> = L.icon({
+	iconUrl: '/sites/all/themes/custom/dm_skin/images/picto/marker_<?php echo $var[$id] ?>.png',
+	});
+var marker_<?php echo $id; ?> = L.marker([<?php echo $adresse_geo ?>], {icon: icon_<?php echo $id; ?>}).addTo(map);
+marker_<?php echo $id; ?>.bindPopup("<?php echo $titre; ?><br /><div class='adresse'><?php echo $rue; ?><br /><?php echo $cp . ' ' . $ville; ?></div><p><a href='<?php echo $fields['url']->content; ?>' class='txt-lire'>Accéder à la fiche complète</a></p>");

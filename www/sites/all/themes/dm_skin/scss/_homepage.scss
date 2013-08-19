@@ -1,0 +1,125 @@
+// HP
+.front {
+  #main {
+    margin-top: 30px;
+  }
+}
+
+// carousel HP
+.carousel-hp {
+  @include shadow-bottom-light;
+  position: relative;
+  background: #fff;
+  margin-bottom: 25px;
+  .slides {
+    li {
+      display: none;
+    }
+    a {
+      display: block;
+      position: relative;
+      display: block;
+      height: 440px;
+    }
+    .illus {
+      display: block;
+      width: 630px;
+      height: 315px;
+    }
+    .date {
+      position: absolute;
+      left: 20px;
+      top: 210px;
+      width: 140px;
+      height: 140px;
+      color: #fff;
+      text-align: center;
+    }
+    .slide-breve {
+      .date {
+        background: url("../images/bg/date_breve.png") 0 0 no-repeat;
+      }
+    }
+    .slide-evenement {
+      .date {
+        background: url("../images/bg/date_evenement.png") 0 0 no-repeat;
+      }
+    }
+    .slide-temoignage {
+      .date {
+        background: url("../images/bg/date_temoignage.png") 0 0 no-repeat;
+      }
+    }
+    .jour {
+      padding-top: 25px;
+      font: 50px 'montserrat',Arial,sans-serif;
+      line-height: 50px;
+    }
+    .mois {
+      font: 35px 'montserrat',Arial,sans-serif;
+      line-height: 35px;
+    }
+    .texte {
+      position: absolute;
+      left: 0;
+      top: 280px;
+      width: 630px;
+      height: 120px;
+      padding-top: 40px;
+      background: #fff;
+      background: -webkit-linear-gradient(top, rgba(255,255,255,.5) 0%,rgba(255,255,255,1) 20%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+      background: linear-gradient(to bottom, rgba(255,255,255,.5) 0%,rgba(255,255,255,1) 20%,rgba(255,255,255,1) 100%); /* W3C */
+    }
+    .categorie {
+      margin-left: 180px;
+      width: 400px;
+      font: bold 13px Arial,sans-serif;
+      text-transform: uppercase;
+      color: #868686;
+    }
+    h2 {
+      margin: 0 0 0 180px;
+      width: 400px;
+      font: bold 22px Verdana,sans-serif;
+      color: #333;
+    }
+  }
+  .flex-control-nav {
+    width: 180px;
+    bottom: 40px;
+  }
+  .flex-control-paging li a {
+    background: url("../images/picto/voyant_off.png") 50% 50% no-repeat;
+    width: 14px;
+    height: 14px;
+    border-radius: 0;
+    box-shadow: none;
+    &:hover {
+      background: url("../images/picto/voyant_on.png") 50% 50% no-repeat;
+      opacity: .5;
+    }
+    &.flex-active {
+      background: url("../images/picto/voyant_on.png") 50% 50% no-repeat;
+      opacity: 1;
+    }
+  }
+}
+
+.titre-breves {
+  margin: 0;
+  font: bold 20px 'montserrat',Arial,sans-serif;
+  padding: 25px 0 7px 85px;
+  background: url("../images/picto/pastille_breves.png") 10px 100% no-repeat;
+}
+.titre-temoignages {
+  margin: 0;
+  font: bold 20px 'montserrat',Arial,sans-serif;
+  padding: 25px 0 7px 85px;
+  background: url("../images/picto/pastille_temoignages.png") 10px 100% no-repeat;
+}
+.titre-evenements {
+  margin: 0;
+  font: bold 20px 'montserrat',Arial,sans-serif;
+  padding: 25px 0 7px 85px;
+  background: url("../images/picto/pastille_evenements.png") 10px 100% no-repeat;
+}

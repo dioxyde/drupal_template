@@ -12,3 +12,4 @@ sites/all/modules/coder/*
 database.sqlite
 
 .DS_Store
+.svn

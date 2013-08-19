@@ -1,0 +1,9 @@
+.form-item  {margin-top: 8px !important; margin-left: 10px !important;}
+.form-type-textfield input {width: 40% !important;}
+.fieldset-legend {width: 100%;}
+
+.form-wrapper {min-height: 20px;}
+.fieldset-legend {cursor: pointer;}
+
+.plus {background-image: url('../images/skin/plus.png');  background-repeat: no-repeat; height: 25px; float: right; width: 25px; margin-top: 8px; margin-right: 25px;}
+.moins {background-image: url('../images/skin/moins.png');  background-repeat: no-repeat; height: 25px; float: right; width: 25px; margin-top: 8px; margin-right: 25px;}

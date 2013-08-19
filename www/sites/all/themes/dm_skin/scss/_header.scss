@@ -1,0 +1,231 @@
+#header {
+  width: $main-width;
+  display: block;
+  height: 169px;
+  padding-top: 1px;
+  margin: 0 auto;
+  position: relative;
+  #logo {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    left: 19px;
+    top: 28px;
+    img {
+      display: block;
+    }
+  }
+  .slogan {
+    position: absolute;
+    left: 220px;
+    top: 36px;
+    color: #b5b5b5;
+    text-align: center;
+    font: normal 25px 'montserrat',Arial,sans-serif;
+    line-height: 25px;
+    .alt-1 {
+      font-size: 31px;
+    }
+    .alt-2 {
+      font-weight: bold;
+    }
+  }
+  .lien-espace-pro {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background: url("../images/struct/lien_espace_pro.png") 0 0 no-repeat;
+    width: 146px;
+    height: 35px;
+    padding-left: 42px;
+    padding-top: 12px;
+    color: #fff;
+    font: bold 16px 'montserrat',Arial,sans-serif;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+    &:hover {
+      color: #eee;
+      text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+    }
+  }
+
+  .search-form {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background: url("../images/bg/form_search.png") 0 0 no-repeat;
+    width: 250px;
+    height: 35px;
+    label {
+      display: none;
+    }
+    .form-text {
+      float: left;
+      display: block;
+      margin-top: 10px;
+      margin-left: 20px;
+      padding: 0;
+      width: 195px;
+      border: none;
+      font: 12px Arial,sans-serif;
+      color: #999;
+      &:hover {
+        color: #666;
+      }
+      &:focus {
+        color: #666;
+      }
+    }
+    .form-submit {
+      float: left;
+      display: block;
+      margin-top: 10px;
+      margin-left: 5px;
+    }
+  }
+
+  .main-menu {
+    .no-js & {
+      position: relative;
+      top: 0;
+      margin-top: 109px;
+    }
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 109px;
+    width: 100%;
+    height: 60px;
+    background: #626062 url("../images/bg/nav.png") 50% 0 repeat-x;
+    @include shadow-bottom-light;
+    ul.level-0 {
+      margin-left: 145px;
+      @include clearfix;
+      > li {
+        .no-js & {
+          float: none;
+        }
+        display: block;
+        float: left;
+        background: url("../images/struct/sep_nav.gif") 0 50% no-repeat;
+        &:first-child {
+          background: none;
+        }
+        > a {
+          display: block;
+          padding: 22px 17px 10px 17px;
+          height: 28px;
+          color: #f4f4ef;
+          font: normal 14px 'montserrat',Arial,sans-serif;
+          text-transform: uppercase;
+          text-shadow: 0px -1px 1px rgba(0, 0, 0, .8);
+        }
+        &.open {
+          > a {
+            color: #a9e6ff;
+          }
+        }
+        &.active-trail {
+          > a {
+            color: #47c9ff;
+          }
+        }
+      }
+    }
+  }
+  .sous-nav {
+    .no-js & {
+      position: relative;
+      top: 0;
+    }
+    @include clearfix;
+    @include box-size;
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgb(255,255,255); /* Old browsers */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+    border: 1px solid #c8c8c8;
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, .3);
+    ul {
+      float: left;
+      width: 255px;
+      padding-left: 29px;
+      padding-right: 29px;
+      &:first-child {
+        border-right: 1px solid #dfdfd5;
+      }
+    }
+    li {
+      a {
+        display: block;
+        color: #555555;
+        font: bold 13px Arial,sans-serif;
+        padding: 9px 0 9px 20px;
+        background: url("../images/picto/puce_bleu.png") 0 14px no-repeat;
+        &:hover {
+          color: $couleur_lien;
+        }
+      }
+      &.active-trail {
+        > a {
+          color: #47c9ff;
+        }
+      }
+      // niveau 3
+      ul {
+        float: none;
+        padding-left: 20px;
+        padding-right: 0;
+        width: auto;
+        a {
+          padding: 4px 0 4px 10px;
+          background: url("../images/picto/puce_gris.png") 0 10px no-repeat;
+          font-weight: normal;
+        }
+      }
+    }
+    .push-nav {
+      display: block;
+      float: right;
+      width: 310px;
+      margin-right: 19px;
+      @include shadow-bottom-light;
+      .illus {
+        display: block;
+        width: 310px;
+      }
+      .texte {
+        padding: 15px 25px;
+        background: #f5a825 url("../images/picto/fl_trou_orange.gif") 0 20px no-repeat;
+        p {
+          margin: 0;
+          color: #fff;
+          font: bold 16px Verdana,sans-serif;
+        }
+      }
+      .txt-lire {
+        display: inline-block;
+        margin-top: 9px;
+        color: #fff;
+        background: #e38f22;
+        padding: 3px 10px 3px 10px;
+        font: 12px Arial,sans-serif;
+        border-radius: 12px;
+        border-top: 1px solid #eaeae0;
+        border-bottom: 1px solid #676759;
+        &:hover {
+          background: #c36f02;
+        }
+      }
+    }
+  }
+}
+
+
+

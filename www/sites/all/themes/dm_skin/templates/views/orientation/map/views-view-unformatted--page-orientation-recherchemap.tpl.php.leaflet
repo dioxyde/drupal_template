@@ -1,0 +1,60 @@
+<?php
+/**
+ * @file
+ * Default simple view template to display a list of rows.
+ *
+ * @ingroup views_templates
+ */
+
+  $theme = base_path() . path_to_theme();
+//  drupal_add_js('https://maps.googleapis.com/maps/api/js?sensor=false', 'external');
+  drupal_add_js('http://cdn.leafletjs.com/leaflet-0.5/leaflet.js', 'external');
+?>
+
+ <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+  <!--[if lte IE 8]>
+       <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
+  <![endif]-->
+<div id="map-canvas"></div>
+
+
+<script type="text/javascript">
+
+// IMPORTANT ! C'est ici qu'on peut specifier n'importe quel serveur de map...
+//  var zelayer = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/997/256/{z}/{x}/{y}.png', {
+//  var zelayer = L.tileLayer('http://mt{s}.google.com/vt/v=w2.1068&x={x}&y={y}&z={z}&s=', { subdomains:'0123', attribution:'&copy; Google' });
+//  var zelayer = L.titleLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', { subdomains:['1234'], attribution:'&copy; Mapquest' }); // Ne marche pas !
+
+<?php
+  $minlong=100;
+  $maxlong=-10;
+  $minlat=100;
+  $maxlat=-10;
+  foreach ($rows as $id => $row) { 
+    $mageoloc = explode('SEPGEO', $row);
+    $geoloc = explode(',', $mageoloc[1]);
+
+    if ($geoloc[0] < $minlong) {
+      $minlong = $geoloc[0];
+    }
+    if ($geoloc[0] > $maxlong) {
+      $maxlong = $geoloc[0];
+    }
+    if ($geoloc[1] < $minlat) {
+      $minlat = $geoloc[1];
+    }
+    if ($geoloc[1] > $maxlat) {
+      $maxlat = $geoloc[1];
+    }
+  } 
+  $malong = ($minlong + $maxlong) / 2;
+  $malat = ($minlat + $maxlat) / 2;
+?>
+
+var map = L.map('map-canvas').setView([<?php echo $malong; ?>, <?php echo $malat; ?>], 13).addLayer(zelayer);
+
+    <?php foreach ($rows as $id => $row): ?>
+        <?php print $row; ?>
+    <?php endforeach; ?>
+
+</script>

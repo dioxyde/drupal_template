@@ -1,0 +1,285 @@
+*:after,
+*:before {
+  box-shadow: none !important;
+}
+
+.titre-breves,
+.titre-evenements,
+.titre-temoignages,
+.strip .info-adresse,
+.strip .info-telephone,
+.strip .info-email,
+.strip .info-personne,
+.strip .info-autre,
+.fiche-organisme .info .adresse,
+.fiche-organisme .info .tel,
+.fiche-organisme .info .fax,
+.fiche-organisme .info .email,
+.fiche-organisme .info .personne,
+.session-infos .info-adresse,
+.session-infos .info-telephone,
+.session-infos .info-fax,
+.session-infos .info-email,
+.session-infos .info-website,
+.serp-organisme .num-telephone,
+.serp-organisme-map .num-telephone,
+.serp-formation .num-telephone,
+.serp-formation-map .num-telephone,
+.serp-organisme .num-fax,
+.serp-organisme-map .num-fax,
+.serp-formation .num-fax,
+.serp-formation-map .num-fax,
+.mes-selections .date,
+.mes-selections .lieu,
+.lorem,
+.push-form-recherche .idf-illus,
+.push-derniers-tweets .titre-push,
+.push-temoignage .titre-push,
+.push-web-tv .titre-push,
+.push-nextchat h2,
+.push-listing-top .titre-push,
+.push-dossier .titre-push,
+.push-formation .titre-push,
+.push-zoom .titre-push,
+.push-insertion .enveloppe-illus,
+.push-temoignages .titre-push,
+.push-connaitre .titre-push,
+.push-organismes .titre-push,
+.push-actions .titre-push,
+.push-reseaux .titre-push,
+.push-evenement .titre-push,
+.push-communiques .titre-push,
+.push-manquer .titre-push,
+.push-videosassociees .titre-push,
+.push-dossiersassocies .titre-push,
+.push-zoomsur .titre-push,
+.push-publications .titre-push,
+.push-secteur .titre-push,
+.push-equipe .titre-push,
+.push-orientation .titre-push,
+.push-form-newsletter .enveloppe-illus,
+.push-collaboratifs .enveloppe-illus {
+	position: relative;
+}
+
+.titre-breves:before,
+.titre-evenements:before,
+.titre-temoignages:before,
+.strip .info-adresse:before,
+.strip .info-telephone:before,
+.strip .info-email:before,
+.strip .info-personne:before,
+.strip .info-autre:before,
+.fiche-organisme .info .adresse:before,
+.fiche-organisme .info .tel:before,
+.fiche-organisme .info .fax:before,
+.fiche-organisme .info .email:before,
+.fiche-organisme .info .personne:before,
+.session-infos .info-adresse:before,
+.session-infos .info-telephone:before,
+.session-infos .info-fax:before,
+.session-infos .info-email:before,
+.session-infos .info-website:before,
+.serp-organisme .num-telephone:before,
+.serp-organisme-map .num-telephone:before,
+.serp-formation .num-telephone:before,
+.serp-formation-map .num-telephone:before,
+.serp-organisme .num-fax:before,
+.serp-organisme-map .num-fax:before,
+.serp-formation .num-fax:before,
+.serp-formation-map .num-fax:before,
+.mes-selections .date:before,
+.mes-selections .lieu:before,
+.lorem:before,
+.push-derniers-tweets .titre-push:before,
+.push-temoignage .titre-push:before,
+.push-web-tv .titre-push:before,
+.push-nextchat h2:before,
+.push-listing-top .titre-push:before,
+.push-dossier .titre-push:before,
+.push-formation .titre-push:before,
+.push-zoom .titre-push:before,
+.push-temoignages .titre-push:before,
+.push-connaitre .titre-push:before,
+.push-organismes .titre-push:before,
+.push-actions .titre-push:before,
+.push-reseaux .titre-push:before,
+.push-evenement .titre-push:before,
+.push-communiques .titre-push:before,
+.push-manquer .titre-push:before,
+.push-videosassociees .titre-push:before,
+.push-dossiersassocies .titre-push:before,
+.push-zoomsur .titre-push:before,
+.push-publications .titre-push:before,
+.push-secteur .titre-push:before,
+.push-equipe .titre-push:before,
+.push-orientation .titre-push:before {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+
+.titre-breves:before {
+	content: url("../images/picto/pastille_breves.png");
+}
+.titre-evenements:before {
+	content: url("../images/picto/pastille_evenements.png");
+}
+.titre-temoignages:before {
+	content: url("../images/picto/pastille_temoignages.png");
+}
+.strip .info-adresse:before {
+	content: url("../images/picto/info-adresse.png");
+}
+.strip .info-telephone:before {
+	content: url("../images/picto/info-telephone.png");
+}
+.strip .info-email:before {
+	content: url("../images/picto/info-enveloppe.png");
+}
+.strip .info-personne:before {
+	content: url("../images/picto/info-personne.png");
+}
+.strip .info-autre:before {
+	content: url("../images/picto/info-autre.png");
+}
+.fiche-organisme .info .adresse:before {
+	content: url("../images/picto/bt_map_rose.png");
+}
+.fiche-organisme .info .tel:before {
+	content: url("../images/picto/tel-pink.png");
+}
+.fiche-organisme .info .fax:before {
+	content: url("../images/picto/bt_imprimer2.png");
+}
+.fiche-organisme .info .email:before {
+	content: url("../images/picto/bt_email2.png");
+}
+.fiche-organisme .info .personne:before {
+	content: url("../images/picto/personne.png");
+}
+.session-infos .info-adresse:before {
+	content: url("../images/picto/info-website.png");
+}
+.session-infos .info-telephone:before {
+	content: url("../images/picto/info-telephone.png");
+}
+.session-infos .info-fax:before {
+	content: url("../images/picto/info-fax.png");
+}
+.session-infos .info-email:before {
+	content: url("../images/picto/info-enveloppe.png");
+}
+.session-infos .info-website:before {
+	content: url("../images/picto/info-website.png");
+}
+.serp-organisme .num-telephone:before,
+.serp-organisme-map .num-telephone:before,
+.serp-formation .num-telephone:before,
+.serp-formation-map .num-telephone:before {
+	content: url("../images/picto/tel.png");
+}
+.serp-organisme .num-fax:before,
+.serp-organisme-map .num-fax:before,
+.serp-formation .num-fax:before,
+.serp-formation-map .num-fax:before {
+	content: url("../images/picto/fax.png");
+}
+.mes-selections .date:before {
+	content: url("../images/picto/calendrier.png");
+}
+.mes-selections .lieu:before {
+	content: url("../images/picto/marker_gris.png");
+}
+.push-derniers-tweets .titre-push:before {
+	content: url("../images/picto/rond_twitter_large.png");
+}
+.push-temoignage .titre-push:before {
+	content: url("../images/picto/rond_bulle.png");
+}
+.push-web-tv .titre-push:before {
+	content: url("../images/picto/rond_tv.png");
+}
+.push-nextchat h2:before {
+	content: url("../images/picto/rond-chat.png");
+}
+.push-links .titre-push:before {
+	content: url("../images/picto/rond-links.png");
+}
+.push-listing-top .titre-push:before {
+	content: url("../images/picto/rond_oeil.png");
+}
+.push-dossier .titre-push:before {
+	content: url("../images/picto/rond_dossier.png");
+}
+.push-formation .titre-push:before {
+	content: url("../images/picto/rond-formation.png");
+}
+.push-zoom .titre-push:before {
+	content: url("../images/picto/rond_book.png");
+}
+.push-temoignages .titre-push:before {
+	content: url("../images/picto/rond_bulle.png");
+}
+.push-connaitre .titre-push:before {
+	content: url("../images/picto/rond-connaitre.png");
+}
+.push-organismes .titre-push:before {
+	content: url("../images/picto/rond-organismes.png");
+}
+.push-actions .titre-push:before {
+	content: url("../images/picto/rond-actions.png");
+}
+.push-reseaux .titre-push:before {
+	content: url("../images/picto/rond-reseaux.png");
+}
+.push-evenement .titre-push:before {
+	content: url("../images/picto/rond-evenement.png");
+}
+.push-communiques .titre-push:before {
+	content: url("../images/picto/rond-communiques.png");
+}
+.push-manquer .titre-push:before {
+	content: url("../images/picto/rond-manquer.png");
+}
+.push-videosassociees .titre-push:before {
+	content: url("../images/picto/rond-videos.png");
+}
+.push-dossiersassocies .titre-push:before {
+	content: url("../images/picto/rond-dossiers.png");
+}
+.push-zoomsur .titre-push:before {
+	content: url("../images/picto/rond-zoomsur.png");
+}
+.push-publications .titre-push:before {
+	content: url("../images/picto/rond-publications.png");
+}
+.push-secteur .titre-push:before {
+	content: url("../images/picto/rond-secteur.png");
+}
+.push-equipe .titre-push:before {
+	content: url("../images/picto/rond-equipe.png");
+}
+.push-orientation .titre-push:before {
+	content: url("../images/picto/rond-orientation.png");
+}
+
+.push-form-recherche .idf-illus:before,
+.push-insertion .enveloppe-illus:before,
+.push-form-newsletter .enveloppe-illus:before,
+.push-collaboratifs .enveloppe-illus:before {
+	position: absolute;
+	left: 10px;
+	top: 25px;
+}
+.push-form-recherche .idf-illus:before {
+	content: url("../images/bg/ile_de_france_small.png");
+}
+.push-insertion .enveloppe-illus:before {
+	content: url("../images/illus/insertion.png");
+}
+.push-form-newsletter .enveloppe-illus:before,
+.push-collaboratifs .enveloppe-illus:before {
+	content: url("../images/bg/enveloppe.png");
+}

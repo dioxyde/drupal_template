@@ -1,0 +1,67 @@
+.invites_chat {
+  @include clearfix;
+}
+.invite_chat {
+  float: left;
+  width: 270px;
+  margin-top: 7px;
+  @include clearfix;
+  &.invite_chat_droite {
+    float: right;
+  }
+  .avatar {
+    float: left;
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+  .texte {
+    float: left;
+    display: block;
+    width: 200px;
+    font: italic 12px Arial,sans-serif;
+    color: #555555;
+  }
+  .auteur {
+    color: #811a76;
+    font: bold 13px Arial,sans-serif;
+  }
+}
+
+.chat {
+  background: #fff url("../images/bg/deg_pointille.gif") 0 0 repeat-x;
+  padding: 30px 30px 10px 30px;
+  .question {
+    margin-right: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 12px;
+    background: url("../images/bg/bulle_vert.png") 20px 100% no-repeat;
+    .inner {
+      padding: 9px 30px;
+      background: #94bc1b;
+      border-radius: 20px;
+      color: #fff;
+      font: italic bold 13px Arial,sans-serif;
+      line-height: 20px;
+    }
+  }
+  .reponse {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    background: url("../images/bg/bulle_gris.png") 500px 100% no-repeat;
+    .inner {
+      padding: 9px 30px;
+      background: #eeeeee;
+      border-radius: 20px;
+      color: #555555;
+      font: 13px Arial,sans-serif;
+      line-height: 20px;
+    }
+    .auteur {
+      color: #811a76;
+      font-weight: bold;
+    }
+  }
+}

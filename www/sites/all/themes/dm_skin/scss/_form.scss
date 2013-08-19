@@ -1,0 +1,364 @@
+.titre-form-idf {
+  background: rgb(184,51,157); /* Old browsers */
+  background: -webkit-linear-gradient(top,  rgba(184,51,157,1) 0%,rgba(129,26,118,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: linear-gradient(to bottom,  rgba(184,51,157,1) 0%,rgba(129,26,118,1) 100%); /* W3C */
+  .titre-form-idf-illus {
+    padding: 10px 20px 10px 150px;
+    background: url("../images/bg/ile_de_france.png") 32px 18px no-repeat;
+    height: 95px;
+    line-height: 95px;
+  }
+  h2 {
+    margin: 0;
+    color: #fff;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+    font: bold 24px 'montserrat',Arial,sans-serif;
+    display: inline-block;
+    line-height: 1.2;
+    vertical-align: middle;
+  }
+}
+.titre-form-espace {
+  background: #b5d212; /* Old browsers */
+  background: -webkit-linear-gradient(top, #b5d212 0%, #75ab0a 100%); /* Chrome10+,Safari5.1+ */
+  background: linear-gradient(to bottom, #b5d212 0%, #75ab0a 100%); /* W3C */
+  h2 {
+    padding: 45px 20px 40px 150px;
+    background: url("../images/bg/titre_espace.png") 45px 100% no-repeat;
+    margin: 0;
+    color: #fff;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+    font: bold 24px 'montserrat',Arial,sans-serif;
+  }
+}
+.formulaire {
+  background: #f1eef1;
+  margin-bottom: 30px;
+  padding: 15px 30px 10px 30px;
+  @include shadow-bottom-light;
+  &.form-simple {
+    background: #fff;
+    margin-bottom: 0;
+    .form-text,
+    .form-textarea,
+    .form-select {
+      border-color: #cccccc;
+    }
+  }
+  h2 {
+    font: bold 22px 'montserrat',Arial,sans-serif;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #7b166f;
+    font: italic normal 16px Arial,sans-serif;
+  }
+  .form-item {
+    @include clearfix;
+    margin-bottom: 25px;
+    label {
+      float: left;
+      width: 180px;
+      margin-right: 10px;
+      padding-top: 6px;
+      font: bold 15px Arial,sans-serif;
+      text-align: right;
+    }
+  }
+  .tooltip-label {
+    display: inline-block;
+    background: url("../images/picto/info.png") 50% 100% no-repeat;
+    width: 14px;
+    height: 15px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  .form-text,
+  .form-textarea,
+  .form-select {
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: inset 0px 3px 8px 0px rgba(0, 0, 0, .2);
+    border: 1px solid #cab4c6;
+    padding: 9px 10px;
+    font: normal 12px Arial,sans-serif;
+    color: #333;
+    width: 380px;
+    @include box-size;
+    &:hover {
+      background: #f5f5f5;
+    }
+    &:focus {
+      background: #f5f5f5;
+    }
+  }
+  .form-textarea {
+    resize :vertical;
+  }
+  .form-radios,
+  .form-checkboxes {
+    float: left;
+    width: 570px;
+    @include clearfix;
+    .sidebar-first &,
+    .sidebar-second & {
+      width: 380px;
+    }
+    .form-item {
+      float: left;
+      margin-right: 30px;
+      margin-top: 6px;
+      margin-bottom: 5px;
+    }
+    label {
+      float: none;
+      width: auto;
+      margin-right: 0;
+      font: normal 12px Arial,sans-serif;
+      text-align: left;
+    }
+  }
+  .form-checkboxes {
+    .form-item {
+      width: 190px;
+      margin-right: 0;
+    }
+  }
+
+  .bloc-choix-multiple {
+    margin-bottom: 25px;
+    padding: 10px 19px;
+    background: #e4d4e4;
+    border: 1px solid #d5c2d6;
+    box-shadow: 0 1px 0 0 #f6f5f6;
+    border-radius: 3px;
+    h3 {
+      padding:0;
+      margin: 0;
+      color: #7b166f;
+      font: bold 16px Arial,sans-serif;
+      background: url("../images/picto/fl_choix_bas.png") 100% 50% no-repeat;
+      cursor: pointer;
+      display:block;
+      &.open {
+        background-image: url("../images/picto/fl_choix_haut.png");
+      }
+      &:hover {
+        color: #ab469f;
+      }
+    }
+    .bloc-choix-inner {
+      @include clearfix;
+      padding-top: 15px;
+    }
+    .col-choix-dispos {
+      float: left;
+      width: 510px;
+      padding-right: 19px;
+      border-right: 1px solid #cfaecd;
+      .sidebar-first &,
+      .sidebar-second & {
+        width: 300px;
+        padding-right: 9px;
+      }
+    }
+    .form-filtre {
+      @include clearfix;
+      position: relative;
+      label {
+        display: none;
+      }
+      .form-text {
+        width: 180px;
+        margin-right: 15px;
+        float: left;
+      }
+      .bt-filter {
+        float: left;
+        @include bouton-submit;
+      }
+      .del-filter {
+        display: none;
+        position: absolute;
+        left: 160px;
+        top: 13px;
+        background: url("../images/picto/croix_violet.gif") 50% 50% no-repeat;
+        height: 8px;
+        width: 8px;
+      }
+    }
+    .tree {
+      margin-top: 20px;
+    }
+    .dynatree-container {
+      height:auto;
+      background: #fff;
+      box-shadow: inset 0px 3px 8px 0px rgba(0, 0, 0, .2);
+      border: 1px solid #cab4c6;
+      // max-height bugge sur IE8
+      .webkit &, .gecko &, .opera &, .ie9 &, .ie10 & {
+        max-height: 300px;
+      }
+    }
+    .dynatree-ico-c .dynatree-icon {
+      display: none;
+    }
+    li.hidden {
+      display: none;
+    }
+    .ui-helper-hidden-accessible {
+      display: none;
+    }
+    .col-choix-actifs {
+      float: left;
+      width: 310px;
+      padding-left: 20px;
+      .sidebar-first &,
+      .sidebar-second & {
+        width: 210px;
+        padding-left: 10px;
+      }
+    }
+    .tt-choix {
+      margin: 0 0 14px 0;
+      font: bold 16px Arial,sans-serif;
+    }
+    .choix-actif {
+      font: 13px Arial,sans-serif;
+    }
+    .del-choice {
+      display: inline-block;
+      background: url("../images/picto/croix_violet.gif") 50% 50% no-repeat;
+      width: 8px;
+      height: 8px;
+    }
+    p {
+      color: #777;
+      font: italic normal 13px Arial,sans-serif;
+    }
+    &.disabled {
+      background: #f0eaf1;
+      h3 {
+        color: #ba9abf;
+        cursor: default;
+        background-image: url("../images/picto/fl_choix_bas_disabled.png");
+      }
+    }
+  }
+
+  .form-actions {
+    clear: both;
+    @include clearfix;
+    margin-bottom: 10px;
+  }
+  .form-submit {
+    @include bouton-submit;
+    float: right;
+  }
+  .form-wrapper {
+    @include clearfix;
+    margin-bottom: 10px;
+  }
+  .form-actions-wrapper {
+    float: right;
+    text-align: center;
+    .form-submit {
+      float: none;
+    }
+  }
+  .lien-plus {
+    display: block;
+    margin-top: 10px;
+    color: #6bb20f;
+    font: bold 16px Arial,sans-serif;
+    text-decoration: underline;
+     -webkit-transition: color 0.3s ease-in-out;
+        -moz-transition: color 0.3s ease-in-out;
+         -ms-transition: color 0.3s ease-in-out;
+          -o-transition: color 0.3s ease-in-out;
+             transition: color 0.3s ease-in-out;
+    &:hover {
+      color: darken(#6bb20f, 8%);
+    }
+  }
+  fieldset {
+    position: relative;
+    margin: 0;
+    padding: 20px 0;
+    border: none;
+    border-top: 1px solid #d9c3d7;
+    &:first-child {
+      border-top: none;
+    }
+  }
+  h3 {
+    font: bold 24px 'montserrat',Arial,sans-serif;
+  }
+  .champs-obligatoires {
+    float: left;
+    color: #919090;
+    font: 12px Arial,sans-serif;
+  }
+
+  // cas particuliers
+  #edit-adresse-itineraire {
+    float: left;
+    width: 190px;
+  }
+  #edit-ville-itineraire {
+    float: right;
+    width: 180px;
+  }
+}
+
+.form-inscription {
+  margin-top: 30px;
+  position: relative;
+  z-index: 0;
+  fieldset {
+    float: left;
+    width: 450px;
+    border-top: none;
+    border-right: 1px solid #e9e9e9;
+    &.fieldset-coordonnees {
+      float: right;
+      width: 400px;
+      border-right: none;
+    }
+  }
+  legend {
+    top: 15px;
+  }
+  .form-item {
+    label {
+      width: 120px;
+    }
+  }
+  .form-text,
+  .form-textarea,
+  .form-select {
+    width: 270px;
+  }
+}
+
+.ui-autocomplete {
+  background: #fff;
+  width: 300px;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #c8b6c6;
+  .ui-menu-item {
+    a {
+      display: block;
+      color: #7B166F;
+      padding: 4px 6px;
+    }
+  }
+  .ui-state-focus {
+    background: #f1e5f1;
+    cursor: pointer;
+  }
+}
+

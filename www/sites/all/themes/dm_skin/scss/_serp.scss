@@ -1,0 +1,365 @@
+.infos-recherche {
+  background: #811a76;
+  color: #fff;
+  @include shadow-bottom-light;
+  .nb-resultats {
+    margin: 0;
+    padding: 20px;
+    font: bold 24px 'montserrat',Arial,sans-serif;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    background: #811a76;
+    background: -webkit-linear-gradient(top, #b8339d 0%, #811a76 100%);
+    background: linear-gradient(to bottom, #b8339d 0%, #811a76 100%);
+  }
+  .filtres-actifs {
+    border-top: 1px solid #a82c91;
+    padding: 20px;
+    h3 {
+      margin: 0;
+      font: bold 16px Arial,sans-serif;
+    }
+    li {
+      margin-top: 10px;
+      padding-left: 10px;
+    }
+    .del-filter {
+      background: url("../images/picto/croix_blanc.gif") 50% 50% no-repeat;
+      display: inline-block;
+      height: 8px;
+      width: 8px;
+      margin-right: 5px;
+    }
+  }
+}
+.titre-filtres {
+  margin: 20px 0 10px 20px;
+  font: bold 24px 'montserrat',Arial,sans-serif;
+}
+.filtres {
+  margin-bottom: 20px;
+  padding: 10px 20px 20px 20px;
+  background: #f1eef1;
+  @include shadow-bottom-light;
+  .filtre {
+    border-bottom: 1px solid #d5c2d6;
+    padding: 10px 0;
+    h3 {
+      margin: 0;
+      color: #7b166f;
+      font: bold 16px Arial,sans-serif;
+      background: url("../images/picto/fl_choix_bas.png") 100% 50% no-repeat;
+      cursor: pointer;
+      &.open {
+        background-image: url("../images/picto/fl_choix_haut.png");
+      }
+      &:hover {
+        color: #ab469f;
+      }
+    }
+    ul {
+      margin-top: 10px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    li {
+      margin-top: 8px;
+      a {
+        color: #333333;
+        &:hover {
+          color: $couleur_lien;
+        }
+      }
+    }
+  }
+  .filtre-inner {
+    @include clearfix;
+  }
+  .lien-tout {
+    margin-top: 20px;
+    float: right;
+    background: url("../images/picto/fl_d_noir.gif") 0 50% no-repeat;
+    padding-left: 11px;
+    font-weight: bold;
+    color: #333333;
+    &:hover {
+      color: $couleur_lien;
+    }
+  }
+  .actions {
+    margin-top: 20px;
+    a {
+      display: block;
+      margin-top: 10px;
+      padding-left: 25px;
+      color:#333;
+      font: 13px 'montserrat',Arial,sans-serif;
+     -webkit-transition: color .2s ease-in-out;
+        -moz-transition: color .2s ease-in-out;
+         -ms-transition: color .2s ease-in-out;
+          -o-transition: color .2s ease-in-out;
+             transition: color .2s ease-in-out;
+      &:hover {
+        color:#009fe4;
+      }
+    }
+    .lien-sauvegarde {
+      background: url("../images/picto/fleche_bleu.png") 0 top no-repeat;
+      &:hover {
+        background-position: 0 bottom;
+      }
+    }
+    .lien-email {
+      background: url("../images/picto/enveloppe.png") 0 top no-repeat;
+      &:hover {
+        background-position: 0 bottom;
+      }
+    }
+    .lien-rss {
+      background: url("../images/picto/rss_bleu.png") 0 top no-repeat;
+      &:hover {
+        background-position: 0 bottom;
+      }
+    }
+  }
+}
+
+.serp-organisme,
+.serp-organisme-map,
+.serp-formation,
+.serp-formation-map {
+  background: #fff;
+  font-size: 13px;
+  li {
+    @include clearfix;
+  }
+  .col-marker {
+    float: left;
+    width: 25px;
+    margin-right: 15px;
+  }
+  .col-text {
+    float: left;
+    min-height : 260px;
+  }
+  .col-pictos {
+    float: left;
+    width: 115px;
+  }
+  .col-map {
+    float: right;
+    width: 180px;
+  }
+  .marker {
+    width: 25px;
+    height: 27px;
+    padding-top: 6px;
+    background: url("../images/picto/marker.png") 50% 0 no-repeat;
+    color: #fff;
+    font: bold 13px Arial,sans-serif;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, .5);
+    text-align: center;
+  }
+  h2 {
+    margin: 0;
+    font: bold 14px 'montserrat',Arial,sans-serif;
+    a {
+      color: #333;
+      &:hover {
+        color: $couleur_lien;
+      }
+    }
+  }
+  .adresse {
+    margin: 3px 0 4px 0;
+    color: #555555;
+  }
+  .num-telephone {
+    display: inline-block;
+    margin-right: 15px;
+    background: url("../images/picto/tel.png") 2px 50% no-repeat;
+    padding-left: 22px;
+    color: #555555;
+  }
+  .num-fax {
+    display: inline-block;
+    background: url("../images/picto/fax.png") 0 50% no-repeat;
+    padding-left: 22px;
+    color: #555555;
+  }
+  .site-web {
+    display: block;
+    margin-top: 4px;
+  }
+  .adresse-email {
+    display: block;
+  }
+  .domaine {
+    margin-top: 8px;
+    font-size:1.1em;
+    font-weight:bold;
+    div {
+      font-weight:normal;
+      font-size:0.85em;
+    }
+  }
+  .picto {
+    margin-bottom: 5px;
+    max-width: 115px;
+    max-height: 90px;
+  }
+  .code {
+    border-top: 1px solid #e9e9e9;
+    padding-top: 1px;
+    color: #555555;
+    font: 10px Arial,sans-serif;
+    text-align: center;
+  }
+  .static-map {
+    width: 180px;
+    height: 110px;
+    margin-bottom: 6px;
+    background: #eee;
+  }
+  .lien-direction {
+    background: url("../images/picto/fl_d_bleu.gif") 2px 50% no-repeat;
+    padding-left: 13px;
+  }
+}
+.serp-organisme {
+  li {
+    padding: 20px;
+    border-top: 1px solid #e9e9e9;
+  }
+  .col-text {
+    width: 235px;
+  }
+  .col-pictos {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align:center;
+  }
+}
+.serp-formation {
+  li {
+    padding: 30px 30px;
+    border-top: 1px solid #e9e9e9;
+    position: relative;
+  }
+  .col-text {
+    width: 445px;
+  }
+  .col-pictos {
+    margin-left: 10px;
+    width: 115px;
+    text-align: center;
+    .picto {
+      display: inline-block;
+    }
+  }
+  h2 {
+    font: bold 22px Verdana,sans-serif;
+    .alt {
+      font-size: 17px;
+    }
+  }
+  h3 {
+    margin: 8px 0 0 0;
+    font: normal 14px Verdana,Arial,sans-serif;
+  }
+  p {
+    line-height: 20px;
+  }
+  .details {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #94bc1b;
+    padding: 30px 30px 0 30px;
+    @include box-size;
+    @include clearfix;
+    h2 {
+      color: #fff;
+      margin-bottom: 15px;
+    }
+    .col_g {
+      float: left;
+      width: 230px;
+      padding-right: 19px;
+      border-right: 1px solid #80a318;
+    }
+    .col_d {
+      float: left;
+      width: 300px;
+      margin-left: 20px;
+    }
+    .label {
+      color: #811a76;
+      font-weight: bold;
+    }
+    .txt-lire {
+      display: inline-block;
+      margin-top: 9px;
+      color: #fff;
+      background: #86aa18;
+      padding: 3px 10px 3px 10px;
+      font: 12px Arial,sans-serif;
+      border-radius: 12px;
+      border-top: 1px solid #b3cf5e;
+      border-bottom: 1px solid #739214;
+      &:hover {
+        background: #668a08;
+      }
+    }
+  }
+}
+.serp-organisme-map,
+.serp-formation-map {
+  #map-canvas {
+    width: 630px;
+    height: 375px;
+  }
+  ul {
+    @include clearfix;
+  }
+  li {
+    float: left;
+    width: 295px;
+    padding: 10px;
+    border-top: 1px solid #e9e9e9;
+    &.odd {
+      clear: both;
+    }
+  }
+  .col-marker {
+    margin-right: 10px;
+  }
+  .col-text {
+    width: 260px;
+    .col-pictos {
+      float: right;
+      width: auto;
+      margin-left: 10px;
+      text-align:right;
+    }
+  }
+  h2 {
+    margin-bottom: 8px;
+  }
+  h3 {
+    margin: 3px 0 0 0;
+    color: #94bc1b;
+    font: bold 13px Arial,sans-serif;
+  }
+  .num-telephone {
+    display: block;
+  }
+  .num-fax {
+    margin-top: 4px;
+    display: block;
+  }
+  .domaine {
+    clear: both;
+  }
+}

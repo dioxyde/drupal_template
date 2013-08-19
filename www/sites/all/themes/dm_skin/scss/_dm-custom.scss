@@ -1,0 +1,737 @@
+@import "dm-variables";
+@import "dm-mixins";
+
+// Ajout d'une classe .chrome-frame pour IE6 & IE7
+.chrome-frame {
+  background: rgb(223, 137, 137);
+  border: 1px solid rgb(202, 56, 56);
+  color: rgb(123, 33, 33);
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 0 10px;
+  width: 940px;
+  margin: 20px auto 0;
+  padding: 20px 30px;
+  line-height: 1.5;
+
+  a {
+    color: white;
+    border-bottom: none;
+    &:hover {
+      border-bottom: solid 1px white;
+    }
+  }
+}
+
+.no-sidebars {
+  #content {
+    width: 100%;
+  }
+}
+
+// Styles de barre (menu utilisateur).
+#user-bar {
+  background: -moz-linear-gradient(center top , white 0%, rgb(204, 204, 204) 100%) repeat scroll 0 0 transparent;
+  border-top: 2px solid rgb(153, 153, 153);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.7);
+  display: none;
+  left: 0;
+  max-width: 100%;
+  padding: 5px 0;
+  width: 100%;
+
+  > div {
+    width: 960px;
+    margin: 0 auto
+  }
+
+  #block-user-login{
+
+    .item-list {
+      display: inline-block;
+      float: none;
+      margin-top: 2px;
+    }
+
+    .form-item, .form-actions {
+      display: block;
+      float: left;
+      margin: 2px 5px 0 0;
+    }
+
+    .form-item input, .form-actions input {
+      margin-bottom: 0;
+    }
+
+    .form-item input.form-text, .form-actions input.form-text {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      font-weight: 600;
+      height: 28px;
+      margin: 0;
+      padding: 6px 8px;
+      width: 150px;
+    }
+
+    .form-item .form-submit,
+    .form-actions .form-submit {
+      display: inline-block;
+      float: none;
+      width: auto;
+    }
+
+    .block-title,
+    label{
+      display: none;
+    }
+    .form-submit {
+      @include button();
+    }
+  }
+
+  #block-system-user-menu {
+    margin-top: 10px;
+    h2 {
+      display: none;
+    }
+  }
+
+  ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    li {
+      position: relative;
+      list-style-type: none;  
+      display: inline-block;
+      *display: inline;
+      margin: 0;
+      padding: 0;
+      a {
+        @include button();
+      }
+    }
+  }
+}
+
+// Redéfinition des margins pour le block de recherche
+.block-search {
+  .form-item, .form-actions  {
+    margin: 0 ;
+  }
+}
+
+#header .main-menu ul.level-0 > li > a.active-trail:hover {
+  color: rgb(71, 201, 255);
+}
+
+#header .main-menu ul.level-0 > li > a:hover {
+  color: #A9E6FF;
+}
+
+.quicktabs-style-nostyle {
+  .item-list {
+    ul, li {
+      margin: 0;
+    }
+  }
+}
+
+// Styles des onglets
+.quicktabs-tabs {
+  @include clearfix;
+  margin-top: 30px;
+
+  li {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    background-color:yellow;
+
+    &:hover:nth-child(1){
+      padding-bottom: 9px;
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+      background-image: url("../images/picto/fl_onglet_vert.png");
+    }
+    &:hover:nth-child(2){
+      padding-bottom: 9px;
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+      background-image: url("../images/picto/fl_onglet_violet.png");
+    }
+    &:hover:nth-child(3){
+      padding-bottom: 9px;
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+      background-image: url("../images/picto/fl_onglet_jaune.png");
+    }
+
+    a {
+      display: block;
+      color: #666666;
+      background-color: #dbdbdb;
+      background-position: 3px 4px;
+      background-repeat: no-repeat;
+      border-radius: 27px;
+      height: 38px;
+      font: bold 16px 'montserrat',Arial,sans-serif;
+      padding: 16px 20px 0;
+      margin-right: 27px;
+      &:active{
+        color: #666666;
+      }
+      &:hover {
+        color: #fff;
+      }
+      &#quicktabs-tab-orientation-0,
+      &#quicktabs-tab-formations-0,
+      &#quicktabs-tab-metiers_secteurs-0 {
+        padding: 16px 30px 0 60px;
+        background-image: url("../images/picto/breves_off.png");
+        &:hover {
+          background-color: #95be0e;
+        }
+      }
+      &#quicktabs-tab-orientation-1,
+      &#quicktabs-tab-formations-1,
+      &#quicktabs-tab-metiers_secteurs-1 {
+        padding: 16px 30px 0 60px;
+        background-image: url("../images/picto/evenements_off.png");
+        &:hover {
+          background-color: #811a76;
+        }
+      }
+      &#quicktabs-tab-orientation-2,
+      &#quicktabs-tab-formations-2,
+      &#quicktabs-tab-metiers_secteurs-2 {
+        padding: 16px 30px 0 60px;
+        background-image: url("../images/picto/temoignages_off.png");
+        &:hover {
+          background-color: #f5a825;
+        }
+      }
+    }
+    &.active {
+      padding-bottom: 9px;
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+      a {
+        color: #ffffff;
+        &#quicktabs-tab-orientation-0,
+        &#quicktabs-tab-formations-0,
+        &#quicktabs-tab-metiers_secteurs-0 {
+          background-image: url("../images/picto/breves_on.png");
+          background-color: #95be0e;
+        }
+        &#quicktabs-tab-orientation-1,
+        &#quicktabs-tab-formations-1,
+        &#quicktabs-tab-metiers_secteurs-1 {
+          background-image: url("../images/picto/evenements_on.png");
+          background-color: #811a76;
+        }
+        &#quicktabs-tab-orientation-2,
+        &#quicktabs-tab-formations-2,
+        &#quicktabs-tab-metiers_secteurs-2 {
+          background-image: url("../images/picto/temoignages_on.png");
+          background-color: #f5a825;
+        }
+      }
+      &:nth-child(1){
+        background-image: url("../images/picto/fl_onglet_vert.png");
+      }
+      &:nth-child(2){
+        background-image: url("../images/picto/fl_onglet_violet.png");
+      }
+      &:nth-child(3){
+        background-image: url("../images/picto/fl_onglet_jaune.png");
+      }
+    }
+  }
+}
+
+#quicktabs-defi_metiers {
+  .quicktabs-tabs {
+    li {
+      a {
+        margin-right: 0;
+      }
+    }
+    li:hover {
+      background-image: url("../images/picto/fl_onglet_orange.png");
+      a {
+        background-color: #EE7F00;
+      }
+    }
+    li.active {
+      background-image: url("../images/picto/fl_onglet_orange.png");
+      a {
+        background-color: #EE7F00;
+      }
+    }
+  }
+}
+
+.qtip {
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, .3);
+}
+
+// MegaMenu
+.qtip-contentWrapper {
+  padding: 20px 0;
+  background: rgb(255,255,255); /* Old browsers */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(237,237,237,1) 100%) !important; /* Chrome10+,Safari5.1+ */
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(237,237,237,1) 100%) !important; /* W3C */
+
+  h2 {
+    display: none;
+  }
+
+  .panel-col-first{
+    border-right: 1px solid #dfdfd5;
+  }
+
+  ul {
+    float: left;
+    width: 255px;
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+  li {
+    a {
+      display: block;
+      color: #555555;
+      font: bold 13px Arial,sans-serif;
+      padding: 9px 0 9px 20px;
+      background: url("../images/picto/puce_bleu.png") 0 14px no-repeat;
+      &:hover {
+        color: $couleur_lien;
+      }
+    }
+    &.active-trail {
+      > a {
+        color: #47c9ff;
+      }
+    }
+    // niveau 3
+    ul {
+      float: none;
+      padding-left: 20px;
+      padding-right: 0;
+      width: auto;
+      a {
+        padding: 4px 0 4px 10px;
+        background: url("../images/picto/puce_gris.png") 0 10px no-repeat;
+        font-weight: normal;
+      }
+    }
+  }
+  .push-nav {
+    display: block;
+    float: right;
+    width: 310px;
+    margin-right: 19px;
+    @include shadow-bottom-light;
+    .illus {
+      display: block;
+      width: 310px;
+    }
+    .texte {
+      padding: 15px 25px;
+      background: #f5a825 url("../images/picto/fl_trou_orange.gif") 0 20px no-repeat;
+      p {
+        margin: 0;
+        color: #fff;
+        font: bold 16px Verdana,sans-serif;
+      }
+    }
+    .txt-lire {
+      display: inline-block;
+      margin-top: 9px;
+      color: #fff;
+      background: #e38f22;
+      padding: 3px 10px 3px 10px;
+      font: 12px Arial,sans-serif;
+      border-radius: 12px;
+      border-top: 1px solid #eaeae0;
+      border-bottom: 1px solid #676759;
+      &:hover {
+        background: #c36f02;
+      }
+    }
+  }
+}
+
+.flexslider {
+  border: none;
+  margin: 0; 
+}
+
+// PILLS
+// -------------
+
+.nav-pills {
+  @include clearfix();
+}
+.nav-pills > li {
+  float: left;
+}
+
+.nav-pills > li > a {
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: 2px;
+  line-height: 14px; // keeps the overall height an even number
+  color: $grayDark;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  @include border-radius(5px);
+  &:hover {
+    background-color: $grayLighter;
+  }
+}
+
+// Active state
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover,
+.nav-pills > .active > a:focus {
+  color: $white;
+  background-color: $violet;
+}
+
+.tabs {
+  display: inline-block;
+  margin: 1.5em 0;
+}
+
+.front #page-title {
+  display:none;
+}
+
+
+.dmtoolbar {
+  form {
+    float:left;
+  }
+}
+
+.complement-titre:first-letter,
+.listing span.date:first-letter {
+  text-transform: uppercase;
+}
+
+.date {
+  .mois{
+    font-style : normal; 
+    text-transform:capitalize; 
+  }
+}
+
+// Les figcaption & co
+
+.credit {
+  display: block;
+  color: #666;
+  @include box-size;
+}
+
+.legende {
+  display: inline-block;
+  background: #000;
+  background: rgba(0, 0, 0, .7);
+  color: #fff;
+  padding: 5px;
+  width: 100%;
+  bottom: 28px;
+  @include box-size;
+}
+
+.credit {
+  font: normal 9px 'montserrat',Arial,sans-serif;
+}
+
+.legende,
+.node-type-panorama .rte figure figcaption,
+.node-type-tableaux-de-bord .rte figure figcaption {
+  font: normal 10px/15px 'montserrat',Arial,sans-serif;
+}
+
+.node-type-panorama .rte figure figcaption,
+.node-type-tableaux-de-bord .rte figure figcaption {
+  padding: 5px 10px;
+  position: relative;
+}
+
+.node-type-panorama .article {
+  padding: 20px 29px;
+}
+
+.reperes {
+  font: bold 14px 'montserrat',Arial,sans-serif;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  //word-wrap: break-word;
+  padding: 0;
+  margin: 0px;
+}
+
+.rte {
+  span {
+    &.icon {
+      height: 24px;
+      margin: 0;
+      padding: 0;
+      width: 24px;
+      display: inline-block;
+    }
+    &.info-mel {
+      background: url('../images/picto/info-enveloppe.png') no-repeat 0 50% ;
+    }
+    &.info-tel {
+      background: url('../images/picto/info-telephone.png') no-repeat 0 50% ;
+    }
+    &.info-web {
+      background: url('../images/picto/info-website.png') no-repeat 0 50% ;
+    }
+  }
+}
+
+.node-type-temoignage {
+  dl {
+    line-height: 21px;
+    dt {
+      float: none;
+      margin: 15px 0;
+      text-align: left;
+      width: 100%
+    }
+    dd {
+      float: none;
+      width: 100%
+    }
+  }
+}
+
+.node-type-publication {
+  .illus-droite {
+    img {
+      border: 1px solid #ccc ;
+    }
+  }
+}
+
+.carousel-shp {
+  .slide-publication {
+    .picto {
+      background: url("../images/picto/rond-publications.png") 23px 28px no-repeat;
+      padding-top: 35px;
+      padding-left: 80px;
+    }
+  }
+  .slide-dossier {
+    .picto {
+      background: url("../images/picto/rond_dossier.png") 23px 28px no-repeat;
+      padding-top: 35px;
+      padding-left: 80px;
+    }
+  }
+  //  .slide-dispositif {
+  //    .picto {
+  //      background: url("../images/picto/rond_book.png") 23px 28px no-repeat;
+  //      padding-top: 35px;
+  //      padding-left: 80px;
+  //    }
+  //  }
+  //  .slide-panorama {
+  //    .picto {
+  //      background: url("../images/picto/rond_breve.png") 23px 28px no-repeat;
+  //      padding-top: 35px;
+  //      padding-left: 80px;
+  //    }
+  //  }
+}
+
+.breadcrumb-final {
+   float: left;
+   display: block;
+   color: #333;
+    background: url("../images/picto/fl_d_gris.gif") 0 50% no-repeat;
+    margin-top: 7px;
+    margin-left: 12px;
+    padding-left: 12px;
+} 
+
+
+/*
+.illus-publication {
+
+  display: block;
+  float: left;
+  height: 80px;
+  margin-right: 15px;
+
+  img {
+    display: block;
+    width: 75px;
+  }
+
+}
+
+.view-taxonomy-term {
+
+  .publication {
+
+    .texte {
+      width: 520px;
+    }
+
+  }
+
+}
+*/
+
+.page-orientation {
+  .txt-lire {
+    display: inline-block;
+    margin-top: 9px;
+    color: #fff;
+    background: #86aa18;
+    padding: 3px 10px 3px 10px;
+    font: 12px Arial,sans-serif;
+    border-radius: 12px;
+    border-top: 1px solid #b3cf5e;
+    border-bottom: 1px solid #739214;
+    &:hover {
+      background: #668a08;
+    }
+  }
+}
+
+.infowindow {
+  max-width: 300px;
+  h2 {
+    margin-bottom: 10px;
+  }
+}
+
+.view-admin-carrousels .formulaire .form-text,
+.view-admin-carrousels .formulaire .form-textarea,
+.view-admin-carrousels .formulaire .form-select {
+  width: 80px;
+}
+
+.view-admin-contenus .formulaire .form-text,
+.view-admin-contenus .formulaire .form-textarea,
+.view-admin-contenus .formulaire .form-select,
+.view-admin-contenus .description {
+  width: 115px;
+}
+
+.view-admin-contenus .formulaire .form-item label {
+  float: none;
+  text-align: left;
+  width: auto;
+  font: bold 12px Arial,sans-serif;
+  color: rgb(51, 51, 51);
+}
+
+.view-admin-contenus .formulaire {
+  margin-bottom: 0;
+}
+
+.view-admin-contenus .formulaire .form-item {
+  margin-bottom: 5px;
+}
+
+.view-display-id-page_etudes .auteur {
+  color: #555555;
+  line-height: 18px;
+  font-style: italic; 
+}
+
+
+.chat {
+  background: #fff url("../images/bg/deg_pointille.gif") 0 0 repeat-x;
+  padding: 30px 30px 10px 30px;
+  dt {
+    margin-right: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 12px;
+    background: url("../images/bg/bulle_vert.png") 20px 100% no-repeat;
+    strong {
+      padding: 9px 30px;
+      background: #94bc1b;
+      border-radius: 20px;
+      color: #fff;
+      font: italic bold 13px Arial,sans-serif;
+      line-height: 20px;
+      display: block;
+    }
+  }
+  dd {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    background: url("../images/bg/bulle_gris.png") 500px 100% no-repeat;
+    p {
+      padding: 9px 30px;
+      background: #eeeeee;
+      border-radius: 20px;
+      color: #555555;
+      font: 13px Arial,sans-serif;
+      line-height: 20px;
+      margin-bottom:0;
+    }
+    strong {
+      color: #811a76;
+      font-weight: bold;
+    }
+  }
+}
+
+// Pastille de carousel de la home.
+.carousel-hp {
+  .slides {
+    .date {
+      background: url("../images/bg/date_generique.png") 0 0 no-repeat;
+    }
+  }
+}
+
+.rte {
+  ol {
+    li {
+      padding: 0;
+      background-image: none;
+    }
+  }
+}
+
+span.illus img {
+  display: block;
+}
+
+.facetapi-limit-link {
+  @extend .lien-tout ;
+}
+
+.serp-structure, {
+  @extend .serp-organisme ;
+}
+
+.serp-structure-map, {
+  @extend .serp-organisme-map ;
+}
+
+.serp-structure,
+.serp-structure-map {
+  .col-text {
+    min-height: 0;
+  }
+}

@@ -1,0 +1,33 @@
+.session-infos {
+  float: left;
+  width: 260px;
+  .info-adresse {
+    padding-left: 30px;
+    background: url("../images/picto/info-adresse.png") 0 0 no-repeat;
+  }
+  .info-telephone {
+    padding-left: 30px;
+    background: url("../images/picto/info-telephone.png") 0 0 no-repeat;
+  }
+  .info-fax {
+    padding-left: 30px;
+    background: url("../images/picto/info-fax.png") 1px 0 no-repeat;
+  }
+  .info-email {
+    padding-left: 30px;
+    background: url("../images/picto/info-enveloppe.png") 0 0 no-repeat;
+  }
+  .info-website {
+    padding-left: 30px;
+    background: url("../images/picto/info-website.png") 1px 2px no-repeat;
+  }
+}
+.session-map {
+  float: right;
+  width: 300px;
+  padding-top: 20px;
+  .static-map {
+    width: 300px;
+    height: 150px;
+  }
+}

@@ -1,0 +1,115 @@
+.fiche-organisme {
+	@include shadow-bottom-light;
+	background: #fff;
+	padding: 30px;
+	hr {
+    	display: block;
+    	clear: both;
+    	height: 1px;
+    	background-color:#CCC;
+    	margin: 25px 0 2px 0;
+    	padding: 0;
+    	border: 0;
+    	line-height: 1;
+	}
+	.info {
+		width: 340px;
+		float:left;
+		.logos-organisme {
+			@include clearfix;
+		}
+		.formulaire {
+			padding: 0;
+			label {
+				text-align: left;
+				width: 100%;
+				margin: 0 0 20px 0;
+			}
+			.form-select {
+				width: 100%;
+			}
+		}
+		.title, .reference {
+			font-weight:bold;
+			font-size:20px;
+			padding:0;
+			margin: 10px 0 10px 0;
+		}
+		.reference {
+			font-weight: normal;
+			font-size: 14px;
+			@include clearfix;
+		}
+		.logos-organisme {
+			.logo {
+				float: left;
+				margin-right: 20px;
+				max-width: 200px;
+				max-height: 100px;
+			}
+		}
+
+		dt {
+			float: none;
+			width: auto;
+			text-align: left;
+			margin: 20px 0 0 0;
+		}
+		dd {
+			float: none;
+			width: auto;
+			margin: 5px 0 0 0;
+		}
+		
+		.tel, .fax, .email, .adresse, .personne, .website {
+			padding-left: 30px;
+			line-height: 21px;
+			display:block;
+			margin-top:20px;
+			font-weight: normal;
+			background: {
+				repeat:no-repeat;
+				position: left top;
+			}
+		}
+		.adresse {
+			background-image: url('../images/picto/info-adresse.png');
+			margin-top: 30px;
+		}
+		.tel {
+			background-image: url('../images/picto/info-telephone.png');
+		}
+		.fax {
+			background-image: url('../images/picto/info-fax.png');
+		}
+		.email {
+			background-image: url('../images/picto/info-enveloppe.png');
+		}
+		.website {
+			background-image: url('../images/picto/info-web.png');
+		}
+		.personne {
+			background-image: url('../images/picto/info-personne.png');
+		}
+	}
+	.map {
+		width: 540px;
+		float: right;
+		#map-canvas {
+			width: 540px;
+			height: 520px;
+			margin-bottom: 20px;
+		}
+		.bouton {
+			float: right;
+			img {
+				position: relative;
+				top:3px;
+				margin-right:5px;
+			}
+		}
+	}
+	.form-item p {
+		font-style:normal;
+	}
+}

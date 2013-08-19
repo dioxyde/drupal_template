@@ -1,0 +1,158 @@
+// sous-homepage
+.cols-shp {
+  @include clearfix;
+  margin-top: 20px;
+}
+.col-left-shp {
+  float: left;
+  width: 310px;
+}
+.col-right-shp {
+  float: right;
+  width: 310px;
+}
+
+.bloc-shp {
+  background: #fff;
+  @include shadow-bottom-light;
+  z-index: 5;
+  h2 {
+    margin: 0;
+    padding-left: 70px;
+    padding-right: 20px;
+    font: bold 20px 'montserrat',Arial,sans-serif;
+    line-height: 70px;
+    height: 70px;
+    background-position: 20px 13px;
+    background-repeat: no-repeat;
+    span {
+      display: inline-block;
+      line-height: 1.2;
+      vertical-align: middle;
+    }
+  }
+  p {
+    margin: 0 0 17px 0;
+    padding-left: 20px;
+    color: #898889;
+    font: 16px 'montserrat',Arial,sans-serif;
+    line-height: 17px;
+  }
+  .listing-shp {
+    background: #fff;
+    li {
+      display: block;
+      border-top: 1px solid #e0e0de;
+    }
+    a {
+      display: block;
+      padding: 25px;
+      color: #333;
+      font: 13px 'montserrat',Arial,sans-serif;
+      &:hover {
+        color: $couleur_lien;
+      }
+    }
+  }
+}
+.shp-web-tv {
+  h2 {
+    background-image: url("../images/picto/rond_tv.png");
+  }
+}
+.shp-podcasts {
+  h2 {
+    background-image: url("../images/picto/rond_podcast.png");
+  }
+  .listing-shp {
+    a {
+      padding-left: 80px;
+      background: url("../images/picto/podcast.png") 29px 50% no-repeat;
+    }
+  }
+}
+.shp-chats {
+  h2 {
+    background-image: url("../images/picto/rond_bulles.png");
+  }
+}
+.shp-lettres-info {
+  h2 {
+    background-image: url("../images/picto/rond_enveloppe.png");
+  }
+  .listing-shp {
+    a {
+      padding-left: 80px;
+      background: url("../images/picto/doc_pdf.png") 28px 50% no-repeat;
+    }
+  }
+}
+.shp-rss {
+  h2 {
+    background-image: url("../images/picto/rond_rss.png");
+  }
+  .listing-shp {
+    a {
+      padding-left: 80px;
+      background: url("../images/picto/rss.png") 33px 50% no-repeat;
+    }
+  }
+}
+
+.carousel-videos {
+  position: relative;
+  border-top: 1px solid #e1e0e1;
+  background: #fff;
+  padding: 20px 36px 10px 36px;
+  width: 558px;
+  height: 175px;
+  a {
+    display: block;
+    width: 170px;
+    margin-left: 8px;
+    margin-right: 8px;
+    position: relative;
+    color: #333;
+    &:hover {
+      color: $couleur_lien;
+    }
+    .illus {
+      display: block;
+      width: 170px;
+      height: 95px;
+    }
+    .bt-play {
+      position: absolute;
+      background: url("../images/picto/bt_play_small.png") 50% 50% no-repeat;
+      display: block;
+      width: 170px;
+      height: 95px;
+      left: 0;
+      top: 0;
+    }
+    h3 {
+      margin: 10px 0 0 0;
+      font: bold 14px Verdana,Arial,sans-serif;
+    }
+    .nom {
+      font: italic normal 12px Verdana,Arial,sans-serif;
+    }
+  }
+  .flex-direction-nav {
+    a {
+      opacity: 1;
+      width: 16px;
+      height: 23px;
+      top: 55px;
+      margin: 0;
+    }
+    .flex-prev {
+      background: url("../images/picto/fl_g_carousel.png") 0 0 no-repeat;
+      left: 15px;
+    }
+    .flex-next {
+      background: url("../images/picto/fl_d_carousel.png") 0 0 no-repeat;
+      right: 15px;
+    }
+  }
+}

@@ -49,11 +49,22 @@
         <exec logoutput="true" dir="${project.basedir}" command="phploc --log-csv '${project.basedir}/build/logs/phploc.csv' '${project.basedir}/${source}/www/sites/all/themes/dm_skin'" escape="false" />
     </target>
 
+    <!-- Code Sniffer -->
+    <target name="phpcs">
+        <phpcodesniffer standard="Zend">
+            <fileset dir="${project.basedir}/${source}/www/sites/all/themes/dm_skin">
+                <include name="**/*.php"/>
+            </fileset>
+            <formatter type="checkstyle" outfile="${project.basedir}/build/logs/checkstyle.xml"/>
+        </phpcodesniffer>
+    </target>
+
     <target name="qa" description="Lance les outils d'analyse">
         <phingcall target="pdepend" />
         <phingcall target="phpmd" />
         <phingcall target="phpcpd" />
         <phingcall target="phploc" />
+        <phingcall target="phpcs" />
     </target>
 
 </project>

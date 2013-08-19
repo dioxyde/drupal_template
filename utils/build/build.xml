@@ -21,25 +21,39 @@
         <mkdir dir="${project.basedir}/build/pdepend" />
     </target>
 
-
+    <!-- PHP Depend -->
     <target name="pdepend">
-        <phpdepend file="${project.basedir}/${source}/www">
+        <phpdepend file="${project.basedir}/${source}/www/sites/all/themes/dm_skin">
             <logger type="jdepend-xml" outfile="${project.basedir}/build/logs/jdepend.xml" />
             <logger type="jdepend-chart" outfile="${project.basedir}/build/pdepend/dependencies.svg" />
             <logger type="overview-pyramid" outfile="${project.basedir}/build/pdepend/overview-pyramid.svg" />
         </phpdepend>
     </target>
 
-
+    <!-- PHP Mess Detector -->
     <target name="phpmd">
-        <phpmd file="${project.basedir}/${source}/www">
+        <phpmd file="${project.basedir}/${source}/www/sites/all/themes/dm_skin">
             <formatter type="xml" outfile="${project.basedir}/build/phpmd.xml" />
         </phpmd>
+    </target>
+
+    <!-- Détection de portions de code copié-collé -->
+    <target name="phpcpd">
+        <phpcpd file="${project.basedir}/${source}/www/sites/all/themes/dm_skin">
+            <formatter type="pmd" outfile="${project.basedir}/build/logs/pmd-cpd.xml"/>
+        </phpcpd>
+    </target>
+
+    <!-- Stats (nombres méthodes, nombres de lignes de code etc... -->
+    <target name="phploc">
+        <exec logoutput="true" dir="${project.basedir}" command="phploc --log-csv '${project.basedir}/build/logs/phploc.csv' '${project.basedir}/${source}/www'" escape="false" />
     </target>
 
     <target name="qa" description="Lance les outils d'analyse">
         <phingcall target="pdepend" />
         <phingcall target="phpmd" />
+        <phingcall target="phpcpd" />
+        <phingcall target="phploc" />
     </target>
 
 </project>

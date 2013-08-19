@@ -8,54 +8,54 @@
     />
 
     <target name="clean" description="Vide les répertoires d'artefacts">
-        <delete dir="${project.basedir}/build/api" />
-        <delete dir="${project.basedir}/build/code-browser" />
-        <delete dir="${project.basedir}/build/coverage" />
-        <delete dir="${project.basedir}/build/logs" />
-        <delete dir="${project.basedir}/build/pdepend" />
+        <delete dir="utils/build/api" />
+        <delete dir="utils/build/code-browser" />
+        <delete dir="utils/build/coverage" />
+        <delete dir="utils/build/logs" />
+        <delete dir="utils/build/pdepend" />
 
-        <mkdir dir="${project.basedir}/build/api" />
-        <mkdir dir="${project.basedir}/build/code-browser" />
-        <mkdir dir="${project.basedir}/build/coverage" />
-        <mkdir dir="${project.basedir}/build/logs" />
-        <mkdir dir="${project.basedir}/build/pdepend" />
+        <mkdir dir="utils/build/api" />
+        <mkdir dir="utils/build/code-browser" />
+        <mkdir dir="utils/build/coverage" />
+        <mkdir dir="utils/build/logs" />
+        <mkdir dir="utils/build/pdepend" />
     </target>
 
     <!-- PHP Depend -->
     <target name="pdepend">
-        <phpdepend file="${project.basedir}/${source}/www/sites/all/themes/dm_skin">
-            <logger type="jdepend-xml" outfile="build/logs/jdepend.xml" />
-            <logger type="jdepend-chart" outfile="build/pdepend/dependencies.svg" />
-            <logger type="overview-pyramid" outfile="build/pdepend/overview-pyramid.svg" />
+        <phpdepend file="${source}/www/sites/all/themes/dm_skin">
+            <logger type="jdepend-xml" outfile="utils/build/logs/jdepend.xml" />
+            <logger type="jdepend-chart" outfile="utils/build/pdepend/dependencies.svg" />
+            <logger type="overview-pyramid" outfile="utils/build/pdepend/overview-pyramid.svg" />
         </phpdepend>
     </target>
 
     <!-- PHP Mess Detector -->
     <target name="phpmd">
-        <phpmd file="${project.basedir}/${source}/www/sites/all/themes/dm_skin">
-            <formatter type="xml" outfile="${project.basedir}/build/phpmd.xml" />
+        <phpmd file="${source}/www/sites/all/themes/dm_skin">
+            <formatter type="xml" outfile="utils/build/phpmd.xml" />
         </phpmd>
     </target>
 
     <!-- Détection de portions de code copié-collé -->
     <target name="phpcpd">
-        <phpcpd file="${project.basedir}/${source}/www/sites/all/themes/dm_skin">
-            <formatter type="pmd" outfile="${project.basedir}/build/logs/pmd-cpd.xml"/>
+        <phpcpd file="${source}/www/sites/all/themes/dm_skin">
+            <formatter type="pmd" outfile="utils/build/logs/pmd-cpd.xml"/>
         </phpcpd>
     </target>
 
     <!-- Stats (nombres méthodes, nombres de lignes de code etc... -->
     <target name="phploc">
-        <exec logoutput="true" dir="${project.basedir}" command="phploc --log-csv '${project.basedir}/build/logs/phploc.csv' '${project.basedir}/${source}/www/sites/all/themes/dm_skin'" escape="false" />
+        <exec logoutput="true" dir="utils" command="phploc --log-csv 'utils/build/logs/phploc.csv' '${source}/www/sites/all/themes/dm_skin'" escape="false" />
     </target>
 
     <!-- Phpdoc -->
     <target name="phpdoc">
         <phpdoc title="API Documentation"
-                destdir="${project.basedir}/build/api"
+                destdir="utils/build/api"
                 sourcecode="false"
                 output="HTML:Smarty:PHP">
-            <fileset dir="${project.basedir}/${source}/www/sites/all/themes/dm_skin">
+            <fileset dir="${source}/www/sites/all/themes/dm_skin">
                 <include name="**/*.php"/>
             </fileset>
             <projdocfileset dir=".">
@@ -68,7 +68,7 @@
 
     <!-- Phpcb -->
     <target name="phpcb">
-        <exec logoutput="true" command="phpcb --log '${project.basedir}/build/logs' --source '${project.basedir}/${source}/www/sites/all/themes/dm_skin' --output '${project.basedir}/build/code-browser'" escape="false" />
+        <exec logoutput="true" command="phpcb --log 'utils/build/logs' --source '${source}/www/sites/all/themes/dm_skin' --output 'utils/build/code-browser'" escape="false" />
     </target>
 
     <target name="qa" description="Lance les outils d'analyse">

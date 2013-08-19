@@ -66,12 +66,18 @@
         </phpdoc>
     </target>
 
+    <!-- Phpcb -->
+    <target name="phpcb">
+        <exec logoutput="true" command="phpcb --log '${project.basedir}/build/logs' --source '${project.basedir}/${source}/www/sites/all/themes/dm_skin' --output '${project.basedir}/build/code-browser'" escape="false" />
+    </target>
+
     <target name="qa" description="Lance les outils d'analyse">
         <phingcall target="pdepend" />
         <phingcall target="phpmd" />
         <phingcall target="phpcpd" />
         <phingcall target="phploc" />
         <phingcall target="phpdoc" />
+        <phingcall target="phpcb" />
     </target>
 
 </project>

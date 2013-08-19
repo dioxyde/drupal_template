@@ -23,7 +23,7 @@
 
     <!-- PHP Depend -->
     <target name="pdepend">
-        <phpdepend file="${source}/www/sites/all/themes/dm_skin">
+        <phpdepend file="www/sites/all/themes/dm_skin">
             <logger type="jdepend-xml" outfile="utils/build/logs/jdepend.xml" />
             <logger type="jdepend-chart" outfile="utils/build/pdepend/dependencies.svg" />
             <logger type="overview-pyramid" outfile="utils/build/pdepend/overview-pyramid.svg" />
@@ -32,21 +32,21 @@
 
     <!-- PHP Mess Detector -->
     <target name="phpmd">
-        <phpmd file="${source}/www/sites/all/themes/dm_skin">
+        <phpmd file="www/sites/all/themes/dm_skin">
             <formatter type="xml" outfile="utils/build/phpmd.xml" />
         </phpmd>
     </target>
 
     <!-- Détection de portions de code copié-collé -->
     <target name="phpcpd">
-        <phpcpd file="${source}/www/sites/all/themes/dm_skin">
+        <phpcpd file="www/sites/all/themes/dm_skin">
             <formatter type="pmd" outfile="utils/build/logs/pmd-cpd.xml"/>
         </phpcpd>
     </target>
 
     <!-- Stats (nombres méthodes, nombres de lignes de code etc... -->
     <target name="phploc">
-        <exec logoutput="true" dir="utils" command="phploc --log-csv 'utils/build/logs/phploc.csv' '${source}/www/sites/all/themes/dm_skin'" escape="false" />
+        <exec logoutput="true" dir="utils" command="phploc --log-csv 'utils/build/logs/phploc.csv' 'www/sites/all/themes/dm_skin'" escape="false" />
     </target>
 
     <!-- Phpdoc -->
@@ -55,7 +55,7 @@
                 destdir="utils/build/api"
                 sourcecode="false"
                 output="HTML:Smarty:PHP">
-            <fileset dir="${source}/www/sites/all/themes/dm_skin">
+            <fileset dir="www/sites/all/themes/dm_skin">
                 <include name="**/*.php"/>
             </fileset>
             <projdocfileset dir=".">
@@ -68,7 +68,7 @@
 
     <!-- Phpcb -->
     <target name="phpcb">
-        <exec logoutput="true" command="phpcb --log 'utils/build/logs' --source '${source}/www/sites/all/themes/dm_skin' --output 'utils/build/code-browser'" escape="false" />
+        <exec logoutput="true" command="phpcb --log 'utils/build/logs' --source 'www/sites/all/themes/dm_skin' --output 'utils/build/code-browser'" escape="false" />
     </target>
 
     <target name="qa" description="Lance les outils d'analyse">

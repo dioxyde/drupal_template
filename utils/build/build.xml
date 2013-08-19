@@ -51,7 +51,7 @@
 
     <!-- Code Sniffer -->
     <target name="phpcs">
-        <phpcodesniffer standard="Drupal">
+        <phpcodesniffer standard="Zend">
             <fileset dir="${project.basedir}/${source}/www/sites/all/themes/dm_skin">
                 <include name="**/*.php"/>
             </fileset>

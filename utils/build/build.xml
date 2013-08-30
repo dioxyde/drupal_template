@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="TestJenkins" default="ci" basedir="">
-    <property name="source" value="jobs/TEST-Drupal1/workspace" />
+    <property name="source" value="jobs/DRUPAL_TEST-01/workspace" />
 
     <target name="build"
         description="Tâche principale d'intégration continue"

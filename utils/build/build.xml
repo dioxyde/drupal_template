@@ -71,6 +71,11 @@
         <exec logoutput="true" command="phpcb --log 'utils/build/logs' --source 'www/sites/all/themes/dm_skin' --output 'utils/build/code-browser'" escape="false" />
     </target>
 
+    <!-- phpunit -->
+    <target name="phpunit">
+        <exec logoutput="true" dir="${project.basedir}/${source}/tests" command="phpunit" escape="false" />
+    </target>
+
     <target name="qa" description="Lance les outils d'analyse">
         <phingcall target="pdepend" />
         <phingcall target="phpmd" />

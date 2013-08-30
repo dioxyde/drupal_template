@@ -83,6 +83,7 @@
         <phingcall target="phploc" />
         <phingcall target="phpdoc" />
         <phingcall target="phpcb" />
+        <phingcall target="phpunit" />
     </target>
 
 </project>

@@ -23,7 +23,7 @@
 
     <!-- PHP Depend -->
     <target name="pdepend">
-        <phpdepend file="www/sites/all/themes/dm_skin">
+        <phpdepend file="www">
             <logger type="jdepend-xml" outfile="utils/build/logs/jdepend.xml" />
             <logger type="jdepend-chart" outfile="utils/build/pdepend/dependencies.svg" />
             <logger type="overview-pyramid" outfile="utils/build/pdepend/overview-pyramid.svg" />
@@ -32,30 +32,30 @@
 
     <!-- PHP Mess Detector -->
     <target name="phpmd">
-        <phpmd file="www/sites/all/themes/dm_skin">
+        <phpmd file="www">
             <formatter type="xml" outfile="utils/build/phpmd.xml" />
         </phpmd>
     </target>
 
     <!-- Détection de portions de code copié-collé -->
     <target name="phpcpd">
-        <phpcpd file="www/sites/all/themes/dm_skin">
+        <phpcpd file="www">
             <formatter type="pmd" outfile="utils/build/logs/pmd-cpd.xml"/>
         </phpcpd>
     </target>
 
     <!-- Stats (nombres méthodes, nombres de lignes de code etc... -->
     <target name="phploc">
-        <exec logoutput="true" dir="utils" command="phploc --log-csv 'utils/build/logs/phploc.csv' 'www/sites/all/themes/dm_skin'" escape="false" />
+        <exec logoutput="true" dir="utils" command="phploc --log-csv 'utils/build/logs/phploc.csv' 'www'" escape="false" />
     </target>
 
     <!-- Phpdoc -->
-    <target name="phpdoc">
+    <!--target name="phpdoc">
         <phpdoc title="API Documentation"
                 destdir="utils/build/api"
                 sourcecode="false"
                 output="HTML:Smarty:PHP">
-            <fileset dir="www/sites/all/themes/dm_skin">
+            <fileset dir="www">
                 <include name="**/*.php"/>
             </fileset>
             <projdocfileset dir=".">
@@ -64,11 +64,21 @@
                 <include name="CHANGELOG"/>
             </projdocfileset>
         </phpdoc>
-    </target>
+    </target-->
 
     <!-- Phpcb -->
     <target name="phpcb">
-        <exec logoutput="true" command="phpcb --log 'utils/build/logs' --source 'www/sites/all/themes/dm_skin' --output 'utils/build/code-browser'" escape="false" />
+        <exec logoutput="true" command="phpcb --log 'utils/build/logs' --source 'www' --output 'utils/build/code-browser'" escape="false" />
+    </target>
+
+    <!--  PHP_CodeSniffer -->
+    <target name="phpcs">
+        <phpcodesniffer standard="Zend">
+            <fileset dir="${project.basedir}/wwww">
+                <include name="**/*.php"/>
+            </fileset>
+            <formatter type="checkstyle" outfile="${project.basedir}/build/logs/checkstyle.xml"/>
+        </phpcodesniffer>
     </target>
 
     <!-- phpunit -->
@@ -81,8 +91,9 @@
         <phingcall target="phpmd" />
         <phingcall target="phpcpd" />
         <phingcall target="phploc" />
-        <phingcall target="phpdoc" />
+        <!--phingcall target="phpdoc" /-->
         <phingcall target="phpcb" />
+        <phingcall target="phpcs" />
         <phingcall target="phpunit" />
     </target>
 

@@ -71,16 +71,6 @@
         <exec logoutput="true" command="phpcb --log 'utils/build/logs' --source 'www/sites/all/themes/dm_skin' --output 'utils/build/code-browser'" escape="false" />
     </target>
 
-    <!--  PHP_CodeSniffer -->
-    <target name="phpcs">
-        <phpcodesniffer standard="Zend">
-            <fileset dir="${project.basedir}/wwww/sites/all/themes/dm_skin">
-                <include name="**/*.php"/>
-            </fileset>
-            <formatter type="checkstyle" outfile="${project.basedir}/build/logs/checkstyle.xml"/>
-        </phpcodesniffer>
-    </target>
-
     <!-- phpunit -->
     <target name="phpunit">
         <exec logoutput="true" dir="${project.basedir}/tests" command="phpunit" escape="false" />
@@ -93,7 +83,6 @@
         <phingcall target="phploc" />
         <phingcall target="phpdoc" />
         <phingcall target="phpcb" />
-        <phingcall target="phpcs" />
         <phingcall target="phpunit" />
     </target>
 

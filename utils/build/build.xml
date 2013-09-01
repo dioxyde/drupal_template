@@ -23,7 +23,7 @@
 
     <!-- PHP Depend -->
     <target name="pdepend">
-        <phpdepend file="www/sites/all/themes/dm_skin">
+        <phpdepend file="wwww/sites/all/themes/dm_skin">
             <logger type="jdepend-xml" outfile="utils/build/logs/jdepend.xml" />
             <logger type="jdepend-chart" outfile="utils/build/pdepend/dependencies.svg" />
             <logger type="overview-pyramid" outfile="utils/build/pdepend/overview-pyramid.svg" />

@@ -32,7 +32,7 @@
 
     <!-- PHP Mess Detector -->
     <target name="phpmd">
-        <phpmd file="www/sites/all/themes/dm_skin">
+        <phpmd file="www/sites/all/modules/dm_skin">
             <formatter type="xml" outfile="utils/build/phpmd.xml" />
         </phpmd>
     </target>
@@ -49,8 +49,18 @@
         <exec logoutput="true" dir="utils" command="phploc --log-csv 'utils/build/logs/phploc.csv' 'www/sites/all/themes/dm_skin'" escape="false" />
     </target>
 
+    <!--  PHP_CodeSniffer -->
+    <target name="phpcs">
+        <phpcodesniffer standard="Zend">
+            <fileset dir="${project.basedir}/wwww/sites/all/themes/dm_skin">
+                <include name="**/*.php"/>
+            </fileset>
+            <formatter type="checkstyle" outfile="${project.basedir}/build/logs/checkstyle.xml"/>
+        </phpcodesniffer>
+    </target>
+
     <!-- Phpdoc -->
-    <target name="phpdoc">
+    <!--target name="phpdoc">
         <phpdoc title="API Documentation"
                 destdir="utils/build/api"
                 sourcecode="false"
@@ -64,7 +74,7 @@
                 <include name="CHANGELOG"/>
             </projdocfileset>
         </phpdoc>
-    </target>
+    </target-->
 
     <!-- Phpcb -->
     <target name="phpcb">
@@ -81,7 +91,8 @@
         <phingcall target="phpmd" />
         <phingcall target="phpcpd" />
         <phingcall target="phploc" />
-        <phingcall target="phpdoc" />
+        <phingcall target="phpcs" />
+        <!--phingcall target="phpdoc" /-->
         <phingcall target="phpcb" />
         <phingcall target="phpunit" />
     </target>

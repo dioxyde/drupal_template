@@ -74,7 +74,7 @@
     <!--  PHP_CodeSniffer -->
     <target name="phpcs">
         <phpcodesniffer standard="Zend">
-            <fileset dir="${project.basedir}/wwww">
+            <fileset dir="${project.basedir}/www">
                 <include name="**/*.php"/>
             </fileset>
             <formatter type="checkstyle" outfile="${project.basedir}/build/logs/checkstyle.xml"/>
